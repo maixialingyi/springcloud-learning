@@ -1,0 +1,28 @@
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enable: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
+    SpringHystrixController#query():
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          semaphore:
+            maxConcurrentRequests: 10
+    SpringHystrixController#insert():
+      execution:
+        isolation:
+          strategy: THREAD
+  threadpool:
+    order-service:
+      coreSize: 2
+      maxQueueSize: 1000
+      queueSizeRejectionThreshold:  800

@@ -1,8 +1,8 @@
 package com.mid.zxadapter.request;
 
-import com.mid.zxadapter.api.request.enums.ActionAlias;
-import com.mid.zxadapter.api.request.enums.ServiceAlias;
-import com.mid.zxadapter.api.request.enums.SupplierAlias;
+import com.mid.zxadapter.request.enums.ActionAlias;
+import com.mid.zxadapter.request.enums.ServiceAlias;
+import com.mid.zxadapter.request.enums.SupplierAlias;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 

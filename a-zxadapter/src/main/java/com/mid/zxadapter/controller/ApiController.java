@@ -1,6 +1,6 @@
 package com.mid.zxadapter.controller;
 
-import com.mid.zxadapter.api.request.Request;
+import com.mid.zxadapter.request.Request;
 import com.mid.zxadapter.aspect.AdapterRequset;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

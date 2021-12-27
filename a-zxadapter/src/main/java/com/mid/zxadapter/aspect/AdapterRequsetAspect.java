@@ -1,9 +1,9 @@
 package com.mid.zxadapter.aspect;
 
 import com.alibaba.fastjson.JSON;
-import com.mid.zxadapter.api.request.AbstractRequest;
-import com.mid.zxadapter.api.request.Request;
-import com.mid.zxadapter.api.request.RequestFactory;
+import com.mid.zxadapter.request.AbstractRequest;
+import com.mid.zxadapter.request.Request;
+import com.mid.zxadapter.request.RequestFactory;
 import com.mid.zxadapter.utils.BeanUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;

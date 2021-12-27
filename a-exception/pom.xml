@@ -10,6 +10,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.mid</groupId>
+    <version>1.0-SNAPSHOT</version>
     <artifactId>a-exception</artifactId>
 
     <properties>
@@ -54,13 +56,13 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.66</version>
+            <version>1.2.60</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.11</version>
+            <version>3.7</version>
         </dependency>
     </dependencies>
 </project>

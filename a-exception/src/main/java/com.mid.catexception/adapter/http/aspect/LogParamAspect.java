@@ -1,7 +1,7 @@
 package com.mid.catexception.adapter.http.aspect;
 
 
-import com.alibaba.fastjson.JSON;
+import com.mid.catexception.adapter.http.controller.TestExceptionController;
 import com.mid.catexception.adapter.http.exception.BaseBizException;
 import com.mid.catexception.adapter.http.exception.BizCode;
 import com.mid.catexception.adapter.util.ExceptionUtil;
@@ -103,10 +103,10 @@ public class LogParamAspect {
                 MethodParameter param = new MethodParameter(methodSignature.getMethod(), i);
                 RequestBody requestBody = param.getParameterAnnotation(RequestBody.class);
                 if (requestBody != null) {
-                    params.put("requestBody", JSON.toJSONString(curArg));
+                    params.put("requestBody", curArg.toString());
                 }
             }
-            paramsStr = JSON.toJSONString(params);
+            paramsStr = params.toString();
             log.info("Http请求参数，url={}, className={}, methodName={}, request={}", url, className, methodName, paramsStr);
         } catch (Exception e) {
             log.error("[Http请求]打印请求参数失败", e);
@@ -118,7 +118,7 @@ public class LogParamAspect {
             String url) {
         try {
             log.info("Http请求返回结果，url={}, className={}, methodName={}, result={}", url, className, methodName,
-                    JSON.toJSONString(result));
+                    result);
         } catch (Exception e) {
             log.error("[Http请求]打印请求结果失败", e);
         }

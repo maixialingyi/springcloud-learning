@@ -8,9 +8,5 @@
     <artifactId>springcloud-learning</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>hystrix-service-demo</module>
-    </modules>
-
 
 </project>

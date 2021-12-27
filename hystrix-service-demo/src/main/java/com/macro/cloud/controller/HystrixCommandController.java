@@ -113,4 +113,30 @@ public class HystrixCommandController {
     public void threadFallback(){
         System.out.println("熔断时间：" + new Date());
     }
+
+    @GetMapping("/testCommand")
+    @HystrixCommand(
+            groupKey = "testGroupKey",
+            commandKey = "testCommandKey",
+            threadPoolKey = "testThreadPoolKey",
+            fallbackMethod = "testFallbackMethod",
+            commandProperties = {
+                    @HystrixProperty(name = "execution.isolation.strategy" , value = "THREAD"),  //使用线程池的隔离
+                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds" , value = "3000"),  //超时设置为3秒
+            },
+            threadPoolProperties = {
+                    @HystrixProperty(name = "coreSize" , value = "1"), //线程池大小
+                    @HystrixProperty(name = "maxQueueSize" , value = "10"), //等待队列长度
+                    @HystrixProperty(name = "keepAliveTimeMinutes", value = "2"),//线程存活时间
+                    @HystrixProperty(name = "queueSizeRejectionThreshold" , value = "1"),//等待队列多少时拒绝
+            }
+    )
+    public void testCommand() throws  Exception  {
+        Thread.sleep(1000);
+        System.out.println(Thread.currentThread() + "正常访问" + num1++);
+    }
+
+    public void testFallbackMethod(){
+        System.out.println("熔断时间：" + new Date());
+    }
 }

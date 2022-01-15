@@ -1,4 +1,4 @@
-package com.mid.base.io.bio;
+package com.mid.base.network.bio;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,8 +6,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
- * @Author jiangshaoyue
- * @Date 2019/7/18 10:18
+ * 服务端socket
  */
 public class SocketHandlerThread implements Runnable{
 

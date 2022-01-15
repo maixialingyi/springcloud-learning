@@ -1,4 +1,4 @@
-package com.mid.base.io.network;
+package com.mid.base.network;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;

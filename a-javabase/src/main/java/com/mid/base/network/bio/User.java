@@ -1,4 +1,4 @@
-package com.mid.base.io.bio;
+package com.mid.base.network.bio;
 
 public class User {
     private Long age;

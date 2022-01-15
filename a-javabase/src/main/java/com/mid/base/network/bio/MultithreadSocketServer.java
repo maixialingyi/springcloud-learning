@@ -1,11 +1,10 @@
-package com.mid.base.io.bio;
+package com.mid.base.network.bio;
 
 import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * @Author jiangshaoyue
- * @Date 2019/7/17 17:49
+ * 多线程服务端
  */
 public class MultithreadSocketServer {
 

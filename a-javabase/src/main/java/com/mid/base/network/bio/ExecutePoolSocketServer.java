@@ -1,4 +1,4 @@
-package com.mid.base.io.bio;
+package com.mid.base.network.bio;
 
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -8,8 +8,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @Author jiangshaoyue
- * @Date 2019/7/18 9:56
+ * 线程池服务端
  */
 public class ExecutePoolSocketServer {
 

@@ -1,4 +1,4 @@
-package com.mid.base.io.bio;
+package com.mid.base.network.bio;
 
 import com.alibaba.fastjson.JSON;
 
@@ -8,8 +8,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
- * @Author jiangshaoyue
- * @Date 2019/7/18 9:22
+ * 客户端
  */
 public class SocketClient {
     public static void main(String args[]) throws Exception {
